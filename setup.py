@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 with open("README.md", "r") as readme_file:
     readme = readme_file.read()
@@ -14,7 +14,7 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     url="https://github.com/Henrik-Kowalkowski/hfkpy",
-    packages=find_packages(),
+    packages=["hfkpy"],
     install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 3.7",

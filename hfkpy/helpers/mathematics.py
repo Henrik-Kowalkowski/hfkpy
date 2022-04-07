@@ -3,6 +3,8 @@ def add(*args):
 
     Returns:
         numeric: The sum of the numbers passed to the function.
+
+    >>> add(1, 2, 3)
     """
     total = 0
     for arg in args:
@@ -20,6 +22,8 @@ def multiply(a, b):
 
     Returns:
         numeric: The result of the multiplication.
+
+    >>> multiply(4, 3)
     """
     return a * b
 

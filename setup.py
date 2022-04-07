@@ -1,4 +1,5 @@
 from setuptools import setup
+from definitions import version
 
 with open("README.md", "r") as readme_file:
     readme = readme_file.read()
@@ -7,7 +8,7 @@ requirements = ["pandas>=1.4.1"]
 
 setup(
     name="hfkpy",
-    version="0.0.1",
+    version=version,
     author="Henrik Kowalkowski",
     author_email="henrikkowalkowski@gmail.com",
     description="A package of helper functions.",

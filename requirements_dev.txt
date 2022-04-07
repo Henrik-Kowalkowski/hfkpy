@@ -1,3 +1,0 @@
-# conda activate envhfkpy
-pip==21.2.4
-wheel==0.37.1

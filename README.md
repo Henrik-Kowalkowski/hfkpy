@@ -1,4 +1,5 @@
 # hfkpy
-A package of helper functions
+An example of a tested and installable package of helper functions.
 
-https://towardsdatascience.com/build-your-first-open-source-python-project-53471c9942a7
+## To install from Git
+`pip install git+https://github.com/Henrik-Kowalkowski/hfkpy@v0.0.0`

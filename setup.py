@@ -15,7 +15,7 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     url="https://github.com/Henrik-Kowalkowski/hfkpy",
-    packages=["hfkpy"],
+    packages=["hfkpy", "hfkpy.helpers"],
     install_requires=requirements,
     classifiers=[
         "Programming Language :: Python :: 3.7",

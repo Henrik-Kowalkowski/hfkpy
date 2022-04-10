@@ -23,4 +23,5 @@ jobs:
         conda env update --file hfkpy_test_env.yml --name hfkpy_test_env
     - name: Test with pytest
       run: |
+        conda activate hfkpy_test_env
         pytest -v

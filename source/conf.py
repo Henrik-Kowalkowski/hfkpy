@@ -15,6 +15,8 @@ import sys
 
 sys.path.insert(0, os.path.abspath(".."))
 
+from definitions import version
+
 
 # -- Project information -----------------------------------------------------
 
@@ -23,7 +25,7 @@ copyright = "2022, Henrik Kowalkowski"
 author = "Henrik Kowalkowski"
 
 # The full version, including alpha/beta/rc tags
-release = "v0.1.0"
+release = f"v{version}"
 
 
 # -- General configuration ---------------------------------------------------

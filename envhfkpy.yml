@@ -1,0 +1,13 @@
+name: envhfkpy
+channels:
+  - defaults
+dependencies:
+  - python==3.9.5
+  - pandas
+  - ipykernel
+  - black
+  - pytest
+  - pathlib
+  - sphinx
+  - pandoc
+prefix: C:\Users\henri\miniconda3\envs\envhfkpy

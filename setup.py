@@ -4,7 +4,7 @@ from definitions import version
 with open("README.md", "r") as readme_file:
     readme = readme_file.read()
 
-requirements = ["pandas>=1.4.1"]
+requirements = ["pandas>=1.4.1", "fitbit>=0.3.1"]
 
 setup(
     name="hfkpy",

@@ -1,0 +1,7 @@
+name: hfkpy_test_env
+channels:
+  - defaults
+dependencies:
+  - python=3.9.5
+  - pytest
+prefix: C:\Users\henri\miniconda3\envs\hfkpy_test_env

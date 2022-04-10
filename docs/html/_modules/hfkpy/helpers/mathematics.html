@@ -27,6 +27,9 @@
         <div class="wy-side-nav-search" >
             <a href="../../../index.html" class="icon icon-home"> hfkpy
           </a>
+              <div class="version">
+                0.1.0
+              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -72,11 +75,15 @@
   <h1>Source code for hfkpy.helpers.mathematics</h1><div class="highlight"><pre>
 <div class="viewcode-block" id="add"><a class="viewcode-back" href="../../../documentation/helpers.html#hfkpy.helpers.mathematics.add">[docs]</a><span></span><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;A function to add elements together and return a sum.</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        *args (keyword): An infinite list of comma separated values to add. </span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        numeric: The sum of the numbers passed to the function.</span>
 
 <span class="sd">    &gt;&gt;&gt; add(1, 2, 3)</span>
+<span class="sd">    &gt;&gt;&gt; add(10, 11, 12, 13)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">:</span>

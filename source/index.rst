@@ -20,14 +20,6 @@ Documentation
 
    documentation/index
 
-Versioning
-==========
-
-.. toctree::
-   :maxdepth: 2
-
-   versioning/index
-
 Examples
 ==========
 
@@ -35,3 +27,19 @@ Examples
    :maxdepth: 2
 
    examples/index
+
+CICD
+==========
+
+.. toctree::
+   :maxdepth: 2
+
+   cicd/index
+
+Versioning
+==========
+
+.. toctree::
+   :maxdepth: 2
+
+   versioning/index

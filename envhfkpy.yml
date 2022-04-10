@@ -103,12 +103,20 @@ dependencies:
   - pip:
     - beautifulsoup4==4.10.0
     - bleach==4.1.0
+    - cheroot==8.6.0
+    - cherrypy==18.6.1
     - defusedxml==0.7.1
     - fastjsonschema==2.15.3
     - fitbit==0.3.1
+    - jaraco-classes==3.2.1
+    - jaraco-collections==3.5.1
+    - jaraco-context==4.1.1
+    - jaraco-functools==3.5.0
+    - jaraco-text==3.7.0
     - jsonschema==4.4.0
     - jupyterlab-pygments==0.1.2
     - mistune==0.8.4
+    - more-itertools==8.12.0
     - nbclient==0.5.13
     - nbconvert==6.4.5
     - nbformat==5.3.0
@@ -117,12 +125,15 @@ dependencies:
     - pandocfilters==1.5.0
     - plumbum==1.7.2
     - ply==3.11
+    - portend==3.1.0
     - pyrsistent==0.18.1
     - python-dotenv==0.19.2
     - requests-oauthlib==1.3.1
     - soupsieve==2.3.2
     - sphinx-rtd-theme==1.0.0
     - sphinxawesome-theme==3.3.0
+    - tempora==5.0.1
     - testpath==0.6.0
     - webencodings==0.5.1
+    - zc-lockfile==2.0
 prefix: C:\Users\henri\miniconda3\envs\envhfkpy

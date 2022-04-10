@@ -1,0 +1,8 @@
+name: test_envhfkpy
+channels:
+  - defaults
+dependencies:
+  - pandas=1.4.1
+  - pytest
+  - python=3.9.5
+prefix: C:\Users\henri\miniconda3\envs\test_envhfkpy

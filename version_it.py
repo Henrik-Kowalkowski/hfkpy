@@ -1,3 +1,5 @@
+# this file should be run whenever the package version is incremented
+
 quit = "n"
 while str.lower(quit) != "y":
     version = input("enter your version number here (e.g. x.x.x): ")

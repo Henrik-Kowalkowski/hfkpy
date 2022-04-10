@@ -13,3 +13,4 @@ An example of a tested and installable package of helper functions.
 
 ## Git actions
 `conda env export --from-history > hfkpy_test_env.yml`
+https://autobencoder.com/2020-08-24-conda-actions/

@@ -18,6 +18,7 @@ def load_tokens(root_directory):
 # Test that we can instantiate a Fitbit client object
 # https://stackoverflow.com/questions/58645563/how-does-pytest-mark-filterwarnings-work
 # https://docs.pytest.org/en/stable/how-to/capture-warnings.html#pytest-mark-filterwarnings
+@pytest.mark.skip(reason="Git actions cannot test this since it requires user clicks")
 @pytest.mark.filterwarnings("ignore::UserWarning")
 def test_client():
     try:

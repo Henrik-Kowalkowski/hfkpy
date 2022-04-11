@@ -39,6 +39,7 @@ def _is_history_dep(d, history_deps):
     if not isinstance(d, str):
         return False
     d_prefix = re.sub(r"=.*", "", d)
+    history_deps = [re.sub(r"=.*", "", d) for d in history_deps]
     return d_prefix in history_deps
 
 

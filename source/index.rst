@@ -45,3 +45,11 @@ Versioning
    :maxdepth: 2
 
    versioning/index
+
+Resources
+=========
+
+.. toctree::
+   :maxdepth: 2
+
+   resources/index

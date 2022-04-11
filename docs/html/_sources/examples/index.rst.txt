@@ -1,8 +1,8 @@
-####################
-  Examples
-####################
+#####################
+  Fitbit API Examples
+#####################
 
 .. toctree::
    :maxdepth: 2
 
-   examples
+   working_with_the_fitbit_api

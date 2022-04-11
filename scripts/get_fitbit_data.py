@@ -27,12 +27,6 @@ auth2_client = fitbit.Fitbit(
     refresh_token=REFRESH_TOKEN,
 )
 
-# most granular data is intraday
-# https://dev.fitbit.com/build/reference/web-api/intraday/get-activity-intraday-by-date/
-oneDate = pd.datetime(year=2022, month=4, day=7)
-oneDayData = auth2_client.intraday_time_series(
-    "activities/heart", oneDate, detail_level="1min"
-)
 
 pd.DataFrame(oneDayData["activities-heart-intraday"]["dataset"])
 
@@ -41,3 +35,4 @@ oneDayData = auth2_client.intraday_time_series(
 )
 
 auth2_client.sl
+

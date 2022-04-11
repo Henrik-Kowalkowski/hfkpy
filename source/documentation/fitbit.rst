@@ -1,6 +1,6 @@
-Helpers
+Fitbit
 =================================
 
-.. automodule:: hfkpy.helpers.mathematics
+.. automodule:: hfkpy.fitbit.get_data
    :members:
    :undoc-members:

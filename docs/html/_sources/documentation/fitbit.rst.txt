@@ -1,6 +1,6 @@
-Members
+Fitbit
 =================================
 
-.. automodule:: hfkpy.members.builders
+.. automodule:: hfkpy.fitbit.get_data
    :members:
    :undoc-members:

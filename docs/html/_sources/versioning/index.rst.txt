@@ -5,4 +5,4 @@
 .. toctree::
    :maxdepth: 2
 
-   versioning
+   what_is_versioning

@@ -28,8 +28,8 @@ Examples
 
    examples/index
 
-CICD
-==========
+Continuous Integration Continuous Deployment
+============================================
 
 .. toctree::
    :maxdepth: 2

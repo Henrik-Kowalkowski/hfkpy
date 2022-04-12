@@ -20,7 +20,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Versioning" href="../versioning/index.html" />
-    <link rel="prev" title="Continuous Integration Continuous Deployment (CICD)" href="index.html" /> 
+    <link rel="prev" title="Envrionment management" href="environment_management.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -49,12 +49,21 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Continuous Integration Continuous Deployment (CICD)</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">How this package uses Git Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="unit_testing_in_practice.html">Unit Testing in practice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="environment_management.html">Envrionment management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How this package uses Git Actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#notes-on-usage">Notes on usage</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../versioning/index.html">Versioning</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documenting/index.html">Documenting</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../resources/index.html">Resources</a></li>
@@ -77,7 +86,7 @@
           <li><a href="index.html">Continuous Integration Continuous Deployment (CICD)</a> &raquo;</li>
       <li>How this package uses Git Actions</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/cicd/git_actions.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/cicd/git_actions.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -111,14 +120,21 @@
 </style>
 <section id="how-this-package-uses-git-actions">
 <h1>How this package uses Git Actions<a class="headerlink" href="#how-this-package-uses-git-actions" title="Permalink to this headline"></a></h1>
-<p>Glad you asked!</p>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<p>Git Actions are a way to automatically run code whenever an event like a pull or push happens via Git. This <a class="reference external" href="https://github.com/Henrik-Kowalkowski/hfkpy/blob/main/.github/workflows/unit-test-hfkpy.yml">example action</a> runs our unit tests whenever we push.</p>
+</section>
+<section id="notes-on-usage">
+<h2>Notes on usage<a class="headerlink" href="#notes-on-usage" title="Permalink to this headline"></a></h2>
+<p>You can <a class="reference external" href="https://github.blog/changelog/2021-02-08-github-actions-skip-pull-request-and-push-workflows-with-skip-ci/">skip running the CICD</a> by adding <code class="docutils literal notranslate"><span class="pre">[skip</span> <span class="pre">ci]</span></code> to the commit message of your commit. This CICD uses a smaller version of <code class="docutils literal notranslate"><span class="pre">envhfkpy</span></code>, called <code class="docutils literal notranslate"><span class="pre">test_envhfkpy</span></code> in order to run more quickly.</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Continuous Integration Continuous Deployment (CICD)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="environment_management.html" class="btn btn-neutral float-left" title="Envrionment management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../versioning/index.html" class="btn btn-neutral float-right" title="Versioning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

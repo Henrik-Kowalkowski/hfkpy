@@ -30,11 +30,6 @@ release = f"v{version}"
 
 # -- General configuration ---------------------------------------------------
 
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
-extensions = []
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
 
@@ -57,16 +52,31 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 
 # -- User added options ------------------------------------------------------
+
+# Extensions to govern site creation
 extensions = [
-    "sphinx.ext.autodoc",
-    "sphinx.ext.coverage",
-    "sphinx.ext.napoleon",
-    "sphinx.ext.viewcode",
-    "sphinx.ext.duration",
-    "nbsphinx",
+    "sphinx.ext.autodoc",  # to automatically document
+    "sphinx.ext.coverage",  # report on how the documentation went
+    "sphinx.ext.napoleon",  # support google and numpy docstrings
+    "sphinx.ext.viewcode",  # add source code refs on function doc
+    "sphinx.ext.duration",  # to time build
+    "nbsphinx",  # for ipynb
+    "myst_parser",  # for md/txt
 ]
 
+# Settings for automatic documentation
 autodoc_default_options = {
     "member-order": "bysource",
     "undoc-members": True,
+}
+
+# To remove warning
+## WARNING: html_static_path entry '_static' does not exist
+html_static_path = []
+
+# To enable the building of markdown pages
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".txt": "markdown",
+    ".md": "markdown",
 }

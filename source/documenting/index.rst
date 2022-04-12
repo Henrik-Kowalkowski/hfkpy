@@ -1,8 +1,8 @@
 ####################
-  Versioning
+  Documenting
 ####################
 
 .. toctree::
    :maxdepth: 2
 
-   what_is_versioning.md
+   how_to_document_this_package.md

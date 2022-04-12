@@ -19,7 +19,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Resources" href="../resources/index.html" />
+    <link rel="next" title="Documenting" href="../documenting/index.html" />
     <link rel="prev" title="Versioning" href="index.html" /> 
 </head>
 
@@ -52,9 +52,16 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Versioning</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">What is Versioning?</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">What is Versioning?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-do-it-here">How to do it here</a></li>
 </ul>
 </li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documenting/index.html">Documenting</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../resources/index.html">Resources</a></li>
@@ -77,7 +84,7 @@
           <li><a href="index.html">Versioning</a> &raquo;</li>
       <li>What is Versioning?</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/versioning/what_is_versioning.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/versioning/what_is_versioning.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -111,7 +118,28 @@
 </style>
 <section id="what-is-versioning">
 <h1>What is Versioning?<a class="headerlink" href="#what-is-versioning" title="Permalink to this headline"></a></h1>
-<p>Glad you asked!</p>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<p>Versioning allows us to set stable release points in the code base for users to pull our package from. This way, a user can always find the version of our package that they used in their previous work to replicate that work. More information on versioning can be found in this <a class="reference external" href="https://py-pkgs.org/07-releasing-versioning">awesome resource</a>.</p>
+</section>
+<section id="how-to-do-it-here">
+<h2>How to do it here<a class="headerlink" href="#how-to-do-it-here" title="Permalink to this headline"></a></h2>
+<p>To version this package, from the root directory of hfkpy run:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">version_it.py</span></code></p>
+<ul>
+<li><p>follow the onscreen prompts</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code></p></li>
+<li><p>on GitHub go to <a class="reference external" href="https://github.com/Henrik-Kowalkowski/hfkpy/releases">releases</a> and draft a <a class="reference external" href="https://github.com/Henrik-Kowalkowski/hfkpy/releases/new">new release</a></p>
+<ul>
+<li><p>be sure to add release notes</p></li>
+<li><p>the release name should be <code class="docutils literal notranslate"><span class="pre">v.x.x.x</span> <span class="pre">some</span> <span class="pre">lower</span> <span class="pre">case</span> <span class="pre">short</span> <span class="pre">description</span></code></p></li>
+</ul>
+</li>
+</ul>
+</section>
 </section>
 
 
@@ -119,7 +147,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Versioning" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../resources/index.html" class="btn btn-neutral float-right" title="Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../documenting/index.html" class="btn btn-neutral float-right" title="Documenting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

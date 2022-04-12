@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Continuous Integration Continuous Deployment (CICD) &mdash; hfkpy v0.1.2 documentation</title>
+  <title>Envrionment management &mdash; hfkpy v0.1.2 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Unit Testing in practice" href="unit_testing_in_practice.html" />
-    <link rel="prev" title="Working with the Fitbit API" href="../examples/working_with_the_fitbit_api.html" /> 
+    <link rel="next" title="How this package uses Git Actions" href="git_actions.html" />
+    <link rel="prev" title="Unit Testing in practice" href="unit_testing_in_practice.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,9 +48,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Fitbit API Examples</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Continuous Integration Continuous Deployment (CICD)</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Continuous Integration Continuous Deployment (CICD)</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="unit_testing_in_practice.html">Unit Testing in practice</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environment_management.html">Envrionment management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Envrionment management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-devlopers">For devlopers</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="git_actions.html">How this package uses Git Actions</a></li>
 </ul>
 </li>
@@ -79,9 +83,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Continuous Integration Continuous Deployment (CICD)</li>
+          <li><a href="index.html">Continuous Integration Continuous Deployment (CICD)</a> &raquo;</li>
+      <li>Envrionment management</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/cicd/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/cicd/environment_management.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -113,35 +118,30 @@
     text-align: unset;
 }
 </style>
-<section id="continuous-integration-continuous-deployment-cicd">
-<h1>Continuous Integration Continuous Deployment (CICD)<a class="headerlink" href="#continuous-integration-continuous-deployment-cicd" title="Permalink to this headline"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="unit_testing_in_practice.html">Unit Testing in practice</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="unit_testing_in_practice.html#why-do-it">Why do it?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="unit_testing_in_practice.html#how-to-do-it">How to do it</a></li>
+<section id="envrionment-management">
+<h1>Envrionment management<a class="headerlink" href="#envrionment-management" title="Permalink to this headline"></a></h1>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<p>There are 3 environments at play in this package to keep in mind:</p>
+<ul class="simple">
+<li><p>development environment <code class="docutils literal notranslate"><span class="pre">envhfkpy</span></code></p></li>
+<li><p>CICD environment <code class="docutils literal notranslate"><span class="pre">test_envhfkpy</span></code></p></li>
+<li><p>user environment <code class="docutils literal notranslate"><span class="pre">unknown</span></code> but augmented by <code class="docutils literal notranslate"><span class="pre">setup.py</span></code></p></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="environment_management.html">Envrionment management</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="environment_management.html#background">Background</a></li>
-<li class="toctree-l2"><a class="reference internal" href="environment_management.html#for-devlopers">For devlopers</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="git_actions.html">How this package uses Git Actions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="git_actions.html#background">Background</a></li>
-<li class="toctree-l2"><a class="reference internal" href="git_actions.html#notes-on-usage">Notes on usage</a></li>
-</ul>
-</li>
-</ul>
-</div>
+<p>The development environment is used by the developers of this package. It requires everything needed to execute the package plus the packages required to document the package. The CICD environment contains only the packages required to test the environment. The user environment is unknown, so it is important to set the requirements in <a class="reference external" href="https://github.com/Henrik-Kowalkowski/hfkpy/blob/main/setup.py">setup.py</a> such that the user can run the package functions if they do not have the required packages already. When installing hfkpy with pip, pip will automatically download the dependencies listed in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>.</p>
+</section>
+<section id="for-devlopers">
+<h2>For devlopers<a class="headerlink" href="#for-devlopers" title="Permalink to this headline"></a></h2>
+<p>If you are adding packages to <code class="docutils literal notranslate"><span class="pre">env_hfkpy</span></code>, or <code class="docutils literal notranslate"><span class="pre">test_envhfkpy</span></code>, make sure that you run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">conda_env_export.py</span> <span class="pre">&gt;</span> <span class="pre">[env_name].yml</span></code> so that the environments are up to date for other users. Also be sure to keep in mind <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> as well. <a class="reference external" href="https://github.com/Henrik-Kowalkowski/hfkpy/blob/main/conda_env_export.py">conda_env_export.py</a> is a custom script that builds the yml for the conda environment from the active conda environment in a way that is OS agnostic so developers can build on Mac OS, Windows, and Linux without concern. The development environment can be refreshed with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">remove</span> <span class="pre">-n</span> <span class="pre">[env_name]</span> <span class="pre">--all</span></code> followed by <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">env</span> <span class="pre">create</span> <span class="pre">-f</span> <span class="pre">[env_name].yml</span> <span class="pre">--prefix</span> <span class="pre">[location_of_env]/[env_name]</span></code></p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../examples/working_with_the_fitbit_api.html" class="btn btn-neutral float-left" title="Working with the Fitbit API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="unit_testing_in_practice.html" class="btn btn-neutral float-right" title="Unit Testing in practice" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="unit_testing_in_practice.html" class="btn btn-neutral float-left" title="Unit Testing in practice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="git_actions.html" class="btn btn-neutral float-right" title="How this package uses Git Actions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -5,4 +5,6 @@
 .. toctree::
    :maxdepth: 2
 
-   git_actions
+   unit_testing_in_practice.md
+   environment_management.md
+   git_actions.md

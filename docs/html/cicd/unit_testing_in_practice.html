@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fitbit API Examples &mdash; hfkpy v0.1.2 documentation</title>
+  <title>Unit Testing in practice &mdash; hfkpy v0.1.2 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -19,8 +19,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Working with the Fitbit API" href="working_with_the_fitbit_api.html" />
-    <link rel="prev" title="Helpers" href="../documentation/helpers.html" /> 
+    <link rel="next" title="How this package uses Git Actions" href="git_actions.html" />
+    <link rel="prev" title="Continuous Integration Continuous Deployment (CICD)" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,14 +44,19 @@
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../documentation/index.html">hfkpy Documentation</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Fitbit API Examples</a></li>
+</ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Fitbit API Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="working_with_the_fitbit_api.html">Working with the Fitbit API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Continuous Integration Continuous Deployment (CICD)</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Unit Testing in practice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#why-do-it">Why do it?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-do-it">How to do it</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="git_actions.html">How this package uses Git Actions</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../cicd/index.html">Continuous Integration Continuous Deployment (CICD)</a></li>
+</li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../versioning/index.html">Versioning</a></li>
@@ -77,9 +82,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Fitbit API Examples</li>
+          <li><a href="index.html">Continuous Integration Continuous Deployment (CICD)</a> &raquo;</li>
+      <li>Unit Testing in practice</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/examples/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/cicd/unit_testing_in_practice.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -111,27 +117,24 @@
     text-align: unset;
 }
 </style>
-<section id="fitbit-api-examples">
-<h1>Fitbit API Examples<a class="headerlink" href="#fitbit-api-examples" title="Permalink to this headline"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="working_with_the_fitbit_api.html">Working with the Fitbit API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="working_with_the_fitbit_api.html#Getting-the-imports-right-for-Sphinx">Getting the imports right for Sphinx</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working_with_the_fitbit_api.html#Grab-the-tokens">Grab the tokens</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working_with_the_fitbit_api.html#Instantiate-the-Fitbit-API-client">Instantiate the Fitbit API client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="working_with_the_fitbit_api.html#Intraday-Fitbit-data">Intraday Fitbit data</a></li>
-</ul>
-</li>
-</ul>
-</div>
+<section id="unit-testing-in-practice">
+<h1>Unit Testing in practice<a class="headerlink" href="#unit-testing-in-practice" title="Permalink to this headline"></a></h1>
+<section id="why-do-it">
+<h2>Why do it?<a class="headerlink" href="#why-do-it" title="Permalink to this headline"></a></h2>
+<p>Unit testing allows the creators of this package to know that their functions do what they expect. Additionally, during decentralized package development, integration of unit tests with CICD allows for tests to run automatically whenever code is pushed. This means that pull requests cannot be merged unless tests pass.</p>
+</section>
+<section id="how-to-do-it">
+<h2>How to do it<a class="headerlink" href="#how-to-do-it" title="Permalink to this headline"></a></h2>
+<p>Unit testing should be done as functions are written. Whenever a person writes a function, as they build it out they test the increments of analysis manually to ensure that when it all comes together it does what they expect. Writing unit tests is just a natural extension of this practice to ensure that function logic is consistent. For more info, see this great <a class="reference external" href="https://py-pkgs.org/05-testing">resource</a>!</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../documentation/helpers.html" class="btn btn-neutral float-left" title="Helpers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="working_with_the_fitbit_api.html" class="btn btn-neutral float-right" title="Working with the Fitbit API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Continuous Integration Continuous Deployment (CICD)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="git_actions.html" class="btn btn-neutral float-right" title="How this package uses Git Actions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

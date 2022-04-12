@@ -47,6 +47,14 @@ Versioning
 
    versioning/index
 
+Documenting
+===========
+
+.. toctree::
+   :maxdepth: 2
+
+   documenting/index
+
 Resources
 =========
 

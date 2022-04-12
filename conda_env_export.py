@@ -72,7 +72,8 @@ def main():
         "You should review and test the output to make sure it works with `conda env create -f`, "
         "and make changes as required.\n"
         "For example, `conda-env-export` itself is not currently uploaded to PyPI, and it must be removed from "
-        "the output file, or else `conda create -f` will fail.",
+        "the output file, or else `conda create -f` will fail.\n"
+        "Specify a prefix with `--prefix` in order to build the environment in the proper folder.",
         file=sys.stderr,
     )
 

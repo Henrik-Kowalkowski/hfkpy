@@ -70,3 +70,7 @@ autodoc_default_options = {
     "member-order": "bysource",
     "undoc-members": True,
 }
+
+# To remove warning
+## WARNING: html_static_path entry '_static' does not exist
+html_static_path = []

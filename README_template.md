@@ -1,4 +1,7 @@
 # hfkpy
+https://img.shields.io/github/v/release/Henrik-Kowalkowski/hfkpy https://img.shields.io/github/workflow/status/Henrik-Kowalkowski/hfkpy/Unit%20Test%20hfkpy https://img.shields.io/github/downloads/Henrik-Kowalkowski/hfkpy/v{version}/total https://img.shields.io/badge/code%20style-black-%23000000
+
+## What is it?
 An example of a tested and installable package of helper functions.
 
 ## To install from Git

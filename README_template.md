@@ -12,5 +12,6 @@ An example of a tested and installable package of helper functions.
 5. `make html` in cmd (if on Windows)
 
 ## Git actions
-`python conda_env_export.py > envhfkpy.yml`
-`python conda_env_export.py > test_envhfkpy.yml`
+`python conda_env_export.py > envhfkpy.yml`  
+`python conda_env_export.py > test_envhfkpy.yml`  
+`conda env create envhfkpy.yml --prefix place_to_store_env/env_name`

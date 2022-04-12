@@ -1,14 +1,10 @@
 """
+https://gist.github.com/gwerbin/dab3cf5f8db07611c6e0aeec177916d8
 Export a Conda environment with --from-history, but also append
 Pip-installed dependencies
 
 Exports only manually-installed dependencies, excluding build versions, but
 including Pip-installed dependencies.
-
-Lots of issues requesting this functionality in the Conda issue tracker, no
-sign of progress (as of March 2020).
-
-TODO (?): support command-line flags -n and -p
 """
 import re
 import subprocess
@@ -39,7 +35,9 @@ def _is_history_dep(d, history_deps):
     if not isinstance(d, str):
         return False
     d_prefix = re.sub(r"=.*", "", d)
+    # get package versions and force add pip
     history_deps = [re.sub(r"=.*", "", d) for d in history_deps]
+    history_deps.append("pip")
     return d_prefix in history_deps
 
 

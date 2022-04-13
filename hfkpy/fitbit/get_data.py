@@ -13,10 +13,8 @@ def client(tokens):
     """
     CLIENT_ID = tokens.loc[
         tokens.token_name == "OAuth 2.0 Client ID", "token_id"
-    ].values[0]
-    CLIENT_SECRET = tokens.loc[tokens.token_name == "Client Secret", "token_id"].values[
-        0
-    ]
+    ].item()
+    CLIENT_SECRET = tokens.loc[tokens.token_name == "Client Secret", "token_id"].item()
 
     server = OAuth2Server(CLIENT_ID, CLIENT_SECRET)
     server.browser_authorize()

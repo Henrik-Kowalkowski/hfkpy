@@ -56,11 +56,9 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Documenting</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">How to document this package</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#to-document">To document</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#first-time">First Time</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#second-time">Second+ Time</a></li>
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-first-time-installation-no-longer-necessary">For first time installation (no longer necessary)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#for-developers">For developers</a></li>
 </ul>
 </li>
 </ul>
@@ -121,23 +119,25 @@
 </style>
 <section id="how-to-document-this-package">
 <h1>How to document this package<a class="headerlink" href="#how-to-document-this-package" title="Permalink to this headline"></a></h1>
-<section id="to-document">
-<h2>To document<a class="headerlink" href="#to-document" title="Permalink to this headline"></a></h2>
-<section id="first-time">
-<h3>First Time<a class="headerlink" href="#first-time" title="Permalink to this headline"></a></h3>
+<section id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline"></a></h2>
+<p>This package uses sphinx and the Read the Docs theme to document its functions and usage. The sphinx package makes it easy to automatically build pretty documentation.</p>
+</section>
+<section id="for-first-time-installation-no-longer-necessary">
+<h2>For first time installation (no longer necessary)<a class="headerlink" href="#for-first-time-installation-no-longer-necessary" title="Permalink to this headline"></a></h2>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">sphinx</span></code> in git bash</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sphinx-quickstart</span></code> in git bash</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">sphinx-rtd-theme</span></code> in git bash</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">pandoc</span></code> in git bash</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code></p></li>
 </ol>
 </section>
-<section id="second-time">
-<h3>Second+ Time<a class="headerlink" href="#second-time" title="Permalink to this headline"></a></h3>
+<section id="for-developers">
+<h2>For developers<a class="headerlink" href="#for-developers" title="Permalink to this headline"></a></h2>
 <ol class="arabic simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> in cmd (if on Windows)</p></li>
 </ol>
-</section>
 </section>
 </section>
 

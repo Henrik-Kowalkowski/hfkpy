@@ -11,3 +11,4 @@ To version this package, from the root directory of hfkpy run:
 - on GitHub go to [releases](https://github.com/Henrik-Kowalkowski/hfkpy/releases) and draft a [new release](https://github.com/Henrik-Kowalkowski/hfkpy/releases/new)
   - be sure to add release notes
   - the release name should be `v.x.x.x some lower case short description`
+  - add a binary to the release like vx.x.x with contents "vx.x.x track" so that the package downloads can be tracked via git API

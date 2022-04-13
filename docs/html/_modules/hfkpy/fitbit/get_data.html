@@ -97,10 +97,8 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">CLIENT_ID</span> <span class="o">=</span> <span class="n">tokens</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span>
         <span class="n">tokens</span><span class="o">.</span><span class="n">token_name</span> <span class="o">==</span> <span class="s2">&quot;OAuth 2.0 Client ID&quot;</span><span class="p">,</span> <span class="s2">&quot;token_id&quot;</span>
-    <span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">CLIENT_SECRET</span> <span class="o">=</span> <span class="n">tokens</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tokens</span><span class="o">.</span><span class="n">token_name</span> <span class="o">==</span> <span class="s2">&quot;Client Secret&quot;</span><span class="p">,</span> <span class="s2">&quot;token_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">[</span>
-        <span class="mi">0</span>
-    <span class="p">]</span>
+    <span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+    <span class="n">CLIENT_SECRET</span> <span class="o">=</span> <span class="n">tokens</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">tokens</span><span class="o">.</span><span class="n">token_name</span> <span class="o">==</span> <span class="s2">&quot;Client Secret&quot;</span><span class="p">,</span> <span class="s2">&quot;token_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
 
     <span class="n">server</span> <span class="o">=</span> <span class="n">OAuth2Server</span><span class="p">(</span><span class="n">CLIENT_ID</span><span class="p">,</span> <span class="n">CLIENT_SECRET</span><span class="p">)</span>
     <span class="n">server</span><span class="o">.</span><span class="n">browser_authorize</span><span class="p">()</span>

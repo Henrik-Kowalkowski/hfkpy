@@ -24,10 +24,20 @@ url = f"{git_api}/repos/{username}/{repo}/releases/latest"
 requests.get(url, auth=(username, token)).text
 
 url = f"{git_api}/repos/{username}/{repo}/git/refs/tags"
-json.loads(requests.get(url, auth=(username, token)).text).keys()
+json.loads(requests.get(url, auth=(username, token)).text)
 
 url = f"{git_api}/repos/{username}/{repo}/stats/code_frequency"
 json.loads(requests.get(url).text)
 
 url = f"{git_api}/repos/{username}/{repo}/stats/commit_activity"
 json.loads(requests.get(url, auth=(username, token)).text)
+
+url = f"{git_api}/repos/{username}/{repo}/releases?/per_page=100"
+releases = json.loads(requests.get(url, auth=(username, token)).text)
+
+for rel in releases:
+  if rel['assets']:
+    tag = rel['tag_name']
+    dls = rel['assets'][0]['download_count']
+    pub = rel['published_at']
+    print(f"Pub: {pub} | Tag: {tag} | Dls: {dls} ")

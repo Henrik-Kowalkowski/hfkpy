@@ -12,3 +12,4 @@ To version this package, from the root directory of hfkpy run:
   - be sure to add release notes
   - the release name should be `v.x.x.x some lower case short description`
   - add a binary to the release like vx.x.x with contents "vx.x.x track" so that the package downloads can be tracked via git API
+  - the badge link in the `README.md` needs to be a `.png` to work properly

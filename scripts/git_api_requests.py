@@ -3,8 +3,7 @@ import json
 import pathlib
 import pandas as pd
 
-# Get the dynamic path to the file so we can edit the tests in interactive mode
-# Need to put hfkpy on the python path to get this to work without pathlib
+# Get the dynamic path to the file
 ROOT_DIR = str(pathlib.Path(__file__).parents[1])
 
 tokens = pd.read_csv(pathlib.Path(ROOT_DIR) / "tokens.csv")
